@@ -1,0 +1,11 @@
+<p>clasic works!</p>
+<main id="main">
+<div id="container-main">
+ <div id="black-part" class="container-clasic" ></div>
+ <div id="white-part" class="container-clasic" >
+    <div *ngFor="let nameKey of keys; let indice = index" (click)="playSound(indice)" id="key-white" translate="no">
+        <p>{{nameKey.note}}</p>
+    </div>
+ </div>
+</div>
+</main>
