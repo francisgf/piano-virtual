@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClasicModule } from './modules/pian-clasic/clasic/clasic.module';
+import { MenuModule } from './modules/menu/menu.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
-    ClasicModule
+    ClasicModule,
+    MenuModule
+
   ]
 })
 export class AppModule { }

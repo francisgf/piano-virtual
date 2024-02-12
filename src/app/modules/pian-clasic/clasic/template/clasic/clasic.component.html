@@ -1,11 +1,34 @@
 <p>clasic works!</p>
 <main id="main">
 <div id="container-main">
- <div id="black-part" class="container-clasic" ></div>
+ <div id="black-part" class="container-clasic" >
+    <div id="controllers-container">
+        <div id="controllers">
+            <div id="bottons" >
+                <ul id="items">
+                    <li><span class="item-botton"> <input type="radio" name="opcion" ></span>Metro</li>
+                    <li><span class="item-botton"></span>Metro</li>
+                    <li><span class="item-botton"></span>Metro</li>
+                </ul>
+            </div>
+            <div id="display">
+              
+            </div>
+        </div>
+
+    </div>
+    <div id="divisor">
+
+    </div>
+ </div>
  <div id="white-part" class="container-clasic" >
-    <div *ngFor="let nameKey of keys; let indice = index" (click)="playSound(indice)" id="key-white" translate="no">
+    <div *ngFor="let nameKey of strNotesSounds; let indice = index" (click)="playSound(nameKey.note,indice)" id="key-white" translate="no">
         <p>{{nameKey.note}}</p>
     </div>
+    <!--<audio controls>
+        <source [src]="strAudio" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>--> 
  </div>
 </div>
 </main>

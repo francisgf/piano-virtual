@@ -15,8 +15,8 @@ html,*{
 }
 
 #container-main{
-width: 1000px;
-height: 300px;
+width: 1300px;
+height: 320px;
 background-color: aliceblue
 }
 
@@ -24,8 +24,81 @@ background-color: aliceblue
     width: 100%;
     height: 50%;
 }
+
 #black-part{
-    background-color:rgb(0, 0, 0);
+    background-color:#1F1F1F;
+}
+
+#controllers-container{
+    display: block;
+    height: 120px;
+    padding: 10px;
+}
+
+#controllers{
+    width: 350px;
+    height: 100px;
+    background-color: #333333;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: flex;
+    padding: 10px;
+
+}
+
+#controllers #bottons{
+    width: 180px;
+    
+}
+
+#controllers #bottons ul{
+    display: block;
+}
+
+#controllers #bottons ul li{
+    list-style: none;
+    padding: 5px;
+    color: #e0e0e0;
+}
+
+#display{
+    background-color: azure;
+    width: 100%;
+    height: 50px;
+}
+
+#items .item-botton {
+    width: 30px;
+    height: 30px;
+    background-color: #272727;
+    display: inline-block;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  input[type="radio"]:checked {
+    background-color: red;
+  }
+
+
+#divisor{
+    display: block;
+    height: 50px;
+    width: auto;
+    background: linear-gradient( 360deg,rgba(1, 1, 1, 1) 0%, rgb(28 28 28) 25%, rgb(53 53 53) 100%)
 }
 
 #white-part{
@@ -33,22 +106,22 @@ background-color: aliceblue
     display: flex;
 
 }
+
 #key-white{
     height: 100%;
-    width: 70px;
+    width: 65px;
     background-color: rgb(255, 255, 255);
-    border: 1px solid  #cbcbcb;
+   /* border: 2px solid  #cbcbcb;*/
     display: inline-block;
     cursor: pointer;
-}
+    border-radius: 0 0 10px 10px;
+    margin: 0px;
+    box-shadow: rgba(47, 47, 48, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;}
 
 #key-white p{
    text-align: center;
    margin-top: 100px;
 }
-
-
-
 
 #key-white:active{
 background-color: #e0e0e0;

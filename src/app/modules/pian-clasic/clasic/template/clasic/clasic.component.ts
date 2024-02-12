@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, } from '@angular/common';
+import { Component,HostListener  } from '@angular/core';
 
 @Component({
   selector: 'app-clasic',
@@ -11,55 +11,67 @@ import { Component } from '@angular/core';
 export class ClasicComponent {
 
   numberKey: number = 10;
+  strAudio:string="" ;
 
-  keys: Array<{ note: String }> = [
+  strNotesSounds: Array<{note:string,routeSound:string}>=[
     {
-      note: "Do"
+      note:"Do1",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
     },
     {
-      note: "Re"
+      note:"Re1",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
     },
     {
-      note: "Mi"
+      note:"Mi1",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
     },
-
     {
-      note: "Fa"
+      note:"Fa1",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
     },
-
     {
-      note: "Sol"
+      note:"Sol1",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
     },
-
     {
-      note: "La"
+      note:"La1",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
     },
-
     {
-      note: "Si"
+      note:"Si1",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
     },
-
     {
-      note: "Do"
-    },
-
-    {
-      note: "Re"
-    },
+      note:"Do2",
+      routeSound:"../../../../../../assets/piano_1.mp3" 
+    }
 
 
   ];
 
-  playSound(key: number): void {
-    console.log("key press ", key)
+  playSound(keyNote: string, index:number): void {
+    console.log("key press ", keyNote)
 
-    if (key === 1) {
-      const audio = new Audio('doja.mp3');
+   
+    if (keyNote === this.strNotesSounds[index].note) {
+      this.strAudio=this.strNotesSounds[index].routeSound;
+      const audio = new Audio(this.strAudio);
+      //audio.src=this.strAudio;
       audio.play();
     } 
   }
 
+/**for ketboard */
 
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'k' || event.key === 'K') {
+      const audio = new Audio("../../../../../../assets/piano_1.mp3" );
+      //audio.src=this.strAudio;
+      audio.play();
+    }
+  }
 
 
 
